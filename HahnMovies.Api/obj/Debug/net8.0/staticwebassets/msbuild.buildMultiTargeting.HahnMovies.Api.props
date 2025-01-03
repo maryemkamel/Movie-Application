@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\HahnMovies.Api.props" />
+</Project>

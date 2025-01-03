@@ -1,0 +1,11 @@
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\bin\Debug\net8.0\HahnMovies.Domain.deps.json
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\bin\Debug\net8.0\HahnMovies.Domain.dll
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\bin\Debug\net8.0\HahnMovies.Domain.pdb
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\HahnMovies.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\HahnMovies.Domain.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\HahnMovies.Domain.AssemblyInfo.cs
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\HahnMovies.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\HahnMovies.Domain.dll
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\refint\HahnMovies.Domain.dll
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\HahnMovies.Domain.pdb
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\ref\HahnMovies.Domain.dll
