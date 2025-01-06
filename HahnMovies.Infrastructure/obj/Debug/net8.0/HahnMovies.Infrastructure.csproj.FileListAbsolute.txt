@@ -17,3 +17,4 @@ C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Infrastructure\obj\Debug\net8.0\refin
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Infrastructure\obj\Debug\net8.0\HahnMovies.Infrastructure.pdb
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Infrastructure\obj\Debug\net8.0\HahnMovies.Infrastructure.genruntimeconfig.cache
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Infrastructure\obj\Debug\net8.0\ref\HahnMovies.Infrastructure.dll
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Infrastructure\obj\Debug\net8.0\HahnMovies.Infrastructure.sourcelink.json

@@ -13,4 +13,10 @@ public class MoviesRepository(AppDbContext dbContext) : RepositoryBase<Movies>(d
 
     public Task<bool> MovieExistsAsync(int movieId, CancellationToken cancellationToken = default)
         => _dbSet.AnyAsync(m => m.Id == movieId, cancellationToken);
+    public async Task<IEnumerable<Movies>> SearchMoviesByTitleAsync(string title, CancellationToken cancellationToken = default)
+    {
+        return await _dbSet
+            .Where(m => m.Title.Contains(title))
+            .ToListAsync(cancellationToken);
+    }
 }

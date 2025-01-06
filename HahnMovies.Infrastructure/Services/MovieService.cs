@@ -16,12 +16,14 @@ public class MovieService : IMovieService
     private readonly ITmdbService _tmdbService;
     private readonly AppDbContext _dbContext;
     private readonly IConfiguration _configuration;
+    private readonly IMoviesRepository _moviesRepository;
 
-    public MovieService(ITmdbService tmdbService, AppDbContext dbContext, IConfiguration configuration)
+    public MovieService(ITmdbService tmdbService, AppDbContext dbContext, IConfiguration configuration, IMoviesRepository moviesRepository)
     {
         _tmdbService = tmdbService;
         _dbContext = dbContext;
         _configuration = configuration;
+        _moviesRepository = moviesRepository;
     }
 
     public async Task SavePopularMoviesAsync(int page, CancellationToken cancellationToken = default)
@@ -104,5 +106,48 @@ public class MovieService : IMovieService
         {
             await _dbContext.BulkInsertAsync(moviesToInsert, cancellationToken: cancellationToken);
         }
+    }
+    public async Task PartialSyncFromChangesAsync(CancellationToken cancellationToken = default)
+    {
+        int page = 1;
+        bool hasMorePages;
+
+        do
+        {
+            // Fetch movie changes from the TMDB API
+            var changesResponse = await _tmdbService.GetMovieChangesAsync(page, cancellationToken);
+
+            if (changesResponse?.Results == null || !changesResponse.Results.Any())
+                break;
+
+            var updatedMovies = new List<Movies>();
+
+            foreach (var change in changesResponse.Results)
+            {
+                // Fetch the movie details using its ID
+                var movieDetails = await _tmdbService.GetMovieDetailsAsync(change.Id, cancellationToken);
+
+                if (movieDetails != null)
+                {
+                    var movieEntity = movieDetails.ToEntity();
+                    updatedMovies.Add(movieEntity);
+                }
+            }
+
+            // Bulk upsert updated movies into the database
+            if (updatedMovies.Any())
+            {
+                await _dbContext.BulkInsertOrUpdateAsync(updatedMovies, cancellationToken: cancellationToken);
+            }
+
+            page++;
+            hasMorePages = changesResponse.TotalPages >= page;
+
+        } while (hasMorePages);
+    }
+    public async Task<IEnumerable<MovieDto>> SearchMoviesAsync(string title, CancellationToken cancellationToken = default)
+    {
+        var movies = await _moviesRepository.SearchMoviesByTitleAsync(title, cancellationToken);
+        return movies.Select(m => m.ToDto());
     }
 }

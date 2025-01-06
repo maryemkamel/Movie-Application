@@ -209,3 +209,4 @@ C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Api\bin\Debug\net8.0\sv\Hangfire.Core
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Api\bin\Debug\net8.0\tr-TR\Hangfire.Core.resources.dll
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Api\bin\Debug\net8.0\zh-TW\Hangfire.Core.resources.dll
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Api\bin\Debug\net8.0\zh\Hangfire.Core.resources.dll
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Api\obj\Debug\net8.0\HahnMovies.Api.sourcelink.json

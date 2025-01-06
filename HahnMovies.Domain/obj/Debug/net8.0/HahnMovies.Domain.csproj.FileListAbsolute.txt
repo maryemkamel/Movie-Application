@@ -9,3 +9,4 @@ C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\HahnMovies.Do
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\refint\HahnMovies.Domain.dll
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\HahnMovies.Domain.pdb
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\ref\HahnMovies.Domain.dll
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Domain\obj\Debug\net8.0\HahnMovies.Domain.sourcelink.json

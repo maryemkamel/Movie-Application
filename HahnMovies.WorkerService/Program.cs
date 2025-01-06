@@ -30,10 +30,10 @@ builder.Services.AddHostedService<Worker>();
 var host = builder.Build();
 
 // Schedule jobs
-using (var scope = host.Services.CreateScope())
-{
-    var jobScheduler = scope.ServiceProvider.GetRequiredService<IJobScheduler>();
-    jobScheduler.ScheduleFullSyncJob();
-}
+var serviceProvider = host.Services.CreateScope().ServiceProvider;
+var jobScheduler = serviceProvider.GetRequiredService<IJobScheduler>();
+jobScheduler.ScheduleFullSyncJob();
+
+
 
 host.Run();

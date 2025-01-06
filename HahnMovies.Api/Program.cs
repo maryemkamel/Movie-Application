@@ -50,7 +50,7 @@ app.MapGet("/weatherforecast", () =>
 .WithOpenApi();
 
 app.MapControllers();
-app.UseHangfireDashboard("/hangfire");
+app.UseHangfireDashboard("/jobs");
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)

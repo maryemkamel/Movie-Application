@@ -9,4 +9,5 @@ public interface IMoviesRepository : IRepositoryBase<Movies>
     Task<Movies?> GetMovieByTitleAsync(string title, CancellationToken cancellationToken = default);
     
     Task<bool> MovieExistsAsync(int movieId, CancellationToken cancellationToken = default);
+    Task<IEnumerable<Movies>> SearchMoviesByTitleAsync(string title, CancellationToken cancellationToken = default);
 }

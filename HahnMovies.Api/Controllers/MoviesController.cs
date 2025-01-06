@@ -42,6 +42,16 @@ namespace HahnMovies.Api.Controllers
             await _movieService.FullSyncFromDailyExportAsync(cancellationToken);
             return Ok("Full movie sync completed successfully!");
         }
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchMovies([FromQuery] string title, CancellationToken cancellationToken = default)
+        {
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                return BadRequest("Title is required.");
+            }
 
+            var movies = await _movieService.SearchMoviesAsync(title, cancellationToken);
+            return Ok(movies);
+        }
     }
 }

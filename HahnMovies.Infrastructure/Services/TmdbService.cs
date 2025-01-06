@@ -62,5 +62,16 @@ namespace HahnMovies.Infrastructure.Services
             var content = await response.Content.ReadAsStringAsync(cancellationToken);
             return JsonSerializer.Deserialize<TmdbMovieDto>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         }
+        public async Task<TmdbMovieChangesResponse?> GetMovieChangesAsync(int page = 1, CancellationToken cancellationToken = default)
+        {
+            var response = await _httpClient.GetAsync($"{_baseUrl}/movie/changes?page={page}&api_key={_apiKey}", cancellationToken);
+
+            if (!response.IsSuccessStatusCode)
+                return null;
+
+            var content = await response.Content.ReadAsStringAsync(cancellationToken);
+            return JsonSerializer.Deserialize<TmdbMovieChangesResponse>(content, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+
     }
 }

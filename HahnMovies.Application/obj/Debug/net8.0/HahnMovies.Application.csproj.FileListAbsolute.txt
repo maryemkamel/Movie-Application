@@ -13,3 +13,4 @@ C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Application\obj\Debug\net8.0\HahnMovi
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Application\obj\Debug\net8.0\refint\HahnMovies.Application.dll
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Application\obj\Debug\net8.0\HahnMovies.Application.pdb
 C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Application\obj\Debug\net8.0\ref\HahnMovies.Application.dll
+C:\Users\HP\Desktop\Hahn_Movies\HahnMovies.Application\obj\Debug\net8.0\HahnMovies.Application.sourcelink.json
